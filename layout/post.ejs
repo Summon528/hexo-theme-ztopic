@@ -14,17 +14,17 @@
         </div>
     </div>
     <div class="post-meta">
-      <span class="post-time"><i class="iconfont icon-calendar"></i><%- date(page.date,"YYYY-MM-DD")%></span>
+      <span class="post-time"><i class="fas fa-calendar"></i><%- date(page.date,"YYYY-MM-DD")%></span>
       <% if (page.categories && page.categories.length){ %>
           <% page.categories.each(function(sorting){ %>
-            <i class="iconfont icon-divide"></i>
-            <i class="iconfont icon-folder" style="color: #8a8a8a;"></i>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-folder" style="color: #8a8a8a;"></i>
             <a class="post-category" href="<%= url_for(sorting.path) %>"><%= sorting.name %></a>
           <% }) %>
       <% } %>
       <!----------------------------------->
         <% if (theme.leancloud.app_id && theme.leancloud.app_key){ %>
-          <i class="iconfont icon-divide"></i>
+          <i class="fas fa-ellipsis-v"></i>
           <div class="post-visits"
                data-url="<%- url_for(page.path) %>"
                data-title="<%- page.title %>">

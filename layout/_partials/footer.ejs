@@ -2,8 +2,11 @@
       <div class="social-links">
         <% for(name in theme.social){ %>
           <% if(theme.social[name]){ %>
-            <a href="<%- url_for(theme.social[name])%>"><i class="iconfont icon-<%= name %>"></i></a>
+            <a href="<%- url_for(theme.social[name])%>"><i class="fab fa-<%= name %>"></i></a>
           <% } %>
+        <% } %>
+        <% if(config.feed) { %>
+          <a href="/<%- config.feed.path %>"><i class="fas fa-rss"></i></a>
         <% } %>
       </div>
       <% if(theme.quote && theme.quote.length){ %>
@@ -27,7 +30,7 @@
             <%= current %>
           <% } %>
           </span>
-          <i class="iconfont icon-circle"></i>
+          <i class="fas fa-circle"></i>
           <span><%= config.author %></span>
         </p>
       </div>

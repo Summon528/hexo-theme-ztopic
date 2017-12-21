@@ -19,15 +19,15 @@
       content.css({minHeight: content.height()<win.height() ? win.height():content.height()});
     }
   }
-
+  
   myFunc.backToTop = function () {
     var $backToTop = $('#back-to-top');
 
     $(window).scroll(function () {
-      if ($(window).scrollTop() > 1000) {
-        $backToTop.show();
+      if ($(window).scrollTop() > 100) {
+        $backToTop.addClass("show");
       } else {
-        $backToTop.hide();
+        $backToTop.removeClass("show");
       }
     });
 
@@ -47,7 +47,7 @@
       var tocState = {
         start: {
           'position': 'absolute',
-          'top': minScrollTop - 340
+          'top': '0px'
         },
         process: {
           'position': 'fixed',
@@ -55,7 +55,7 @@
         },
         end: {
           'position': 'absolute',
-          'top': maxScrollTop - 340
+          'top': '0px'
         }
       }
 
@@ -123,10 +123,15 @@
     $(window).scroll(myFunc.throttle(function(){
       if($(window).width() > 900){
         afterScroll = $(this).scrollTop();
-        if(afterScroll > beforeScroll){
-          $nav.fadeOut(500);
+        if (afterScroll > beforeScroll) {
+          $nav.addClass('opacity0');
         } else {
-          $nav.fadeIn(500);
+          $nav.removeClass('opacity0');
+          if (afterScroll > 100) {
+            $nav.addClass('nottop');
+          } else {
+            $nav.removeClass('nottop');
+          }
         }
         beforeScroll = afterScroll;
       }
@@ -149,10 +154,10 @@
     });
 
     slideout.on('beforeopen',function(){
-      $("#mobile-nav-toggle").attr("class","iconfont icon-turnoff");
+      $("#mobile-nav-toggle").attr("class","far fa-circle");
     });
     slideout.on('beforeclose',function(){
-      $("#mobile-nav-toggle").attr("class","iconfont icon-turnon");
+      $("#mobile-nav-toggle").attr("class","far fa-dot-circle");
     })
 
     $('#mobile-nav-panel').on('touchend', function () {

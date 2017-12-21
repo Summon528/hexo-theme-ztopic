@@ -2,33 +2,25 @@
 //banner color
 $main-color: #34495e !default; //#00bcd5
 //header and footer font color
-$theme-font-color: #fff !default;
+$theme-font-color: #FFF !default;
 //header background color
-$nav-color: rgba(52,73,94,.9) !default; //rgba(0,188,213,.9)
+$nav-color: rgba(11, 63, 92, 0.8) !default; //rgba(0,188,213,.9)
 //theme's main red color
 $main-red: #f6695f !default;
 //post font color
-$main-font-color: #34495e !default;
+$main-font-color: #37474F !default;
 // footer copyright-color
-$copyright-color: #aaa !default;
+$copyright-color: #37474F !default;
 // content width
 $main-width: 960px !default;
 //footer height
 $footer-height: 170px !default;
 
 //font-family
-@font-face {
-  font-family: 'Playball';
-  src: url('../fonts/Playball/Playball-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Satisfy';
-  src: url('../fonts/Satisfy/Satisfy-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css?family=Play");
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
+@import url("https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css");
+
 // Font family of the site.
 $global-font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
 
@@ -36,10 +28,10 @@ $global-font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !def
 $global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
 
 //art font family
-$art-font: 'Satisfy', cursive, LiSu, sans-serif !default;
+$art-font: 'Julius Sans One', cursive, LiSu, sans-serif !default;
 
 //logo font family
-$logo-font: 'Playball', cursive !default;
+$logo-font: 'Play', cursive !default;
 
 //heading font size
 $global-headings: (

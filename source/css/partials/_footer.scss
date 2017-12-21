@@ -5,12 +5,16 @@ footer{
   height: $footer-height;
   background: $main-color;
   text-align: center;
-  color: $theme-font-color;
+  color: #37474F;
   font-size: 16px;
+  background-attachment: fixed;
+  background-image: url("/img/background.png");
+  background-position: center bottom;
+  background-size: auto 570px;
   .social-links a i{
     display: inline-block;
     margin: 10px;
-    color: $theme-font-color;
+    color: #37474F;
     font-size: 30px;
     transition: color .3s;
     &:hover{

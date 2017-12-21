@@ -10,30 +10,29 @@ menu:
   home: /
   archive: /archives
   #category: /categories
-  #tags: /tags
+  tags: /tags
   about: /about
 
 # site logo introduce and footer quote
 # ====================================
-logo: Ztopic
+logo: Concrete
 introduce: "practice makes perfect"
-quote: "Love all, trust a few, do wrong to none.——William Shakespeare"
+quote: "Some very cool quotes"
 
 # social club
 # ====================================
 social:
-  zhihu: https://www.zhihu.com/
-  weibo: https://weibo.com
+  weibo: 
   github: https://github.com/
   steam:
   linkedin:
-  facebook:
-  twitter:
+  facebook: https://www.facebook.com/
+  twitter: https://twitter.com/
   douban:
   tumblr:
   instagram:
   stackoverflow:
-  rss:
+  reddit: https://www.reddit.com/user/
 
 # third party services settings
 # ===================================
@@ -58,9 +57,10 @@ valine:
   pageSize: 10 # comment list page size
 
 #disqus
-disqus_shortname:
+disqus_shortname: 
 
-
+mathjax: false
+google_analytics: UA-xxxxxxxxx-x
 # ==================================
 version: 1.0
 # ==================================

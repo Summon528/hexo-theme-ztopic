@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= config.language %>">
 <%- partial('_partials/head') %>
 <body>
   <div class="mobile-header">
-    <span><i class="iconfont icon-turnon" id="mobile-nav-toggle"></i></span>
+    <span><i class="far fa-dot-circle" id="mobile-nav-toggle"></i></span>
     <div class="mobile-logo">
       <a href="<%= url_for('.') %>"><%= theme.logo %></a>
     </div>
@@ -20,7 +20,7 @@
     </div>
     <%- partial('_partials/footer') %>
     <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+      <i class="fas fa-angle-double-up"></i>
     </div>
   </div>
   <%- partial('_partials/slideout') %>
@@ -33,5 +33,8 @@
   <% } %>
   <%- partial('_widget/leancloud') %>
   <%- js('js/ztopic.js') %>
+  <%- js('js/concrete.js') %>
+  <%- js('js/awesomplete.js') %>
+  <%- js('js/copy.js') %>
 </body>
 </html>

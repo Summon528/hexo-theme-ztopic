@@ -5,10 +5,19 @@
         </div>
         <nav class="navbar">
           <ul>
+            <li style="margin:0;">
+              <input placeholder="Search" onclick="initSearch();" id="search">
+            </li>
             <% for(name in theme.menu) { %>
-              <li class="menu-item">
-                <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><i class="iconfont icon-<%= name %>"></i><%= __('menu.' + name) %></a>
-              </li>
+              <% if(name == 'about') { %>
+                <li class="menu-item">
+                  <a href="/about" class="menu-item-link"><i class="fas fa-info-circle"></i><%= __('menu.' + name) %></a>
+                </li>
+              <% } else { %>  
+                <li class="menu-item">
+                  <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><i class="fas fa-<%= name %>"></i><%= __('menu.' + name) %></a>
+                </li>
+              <% } %>
             <% } %>
           </ul>
         </nav>

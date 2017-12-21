@@ -1,14 +1,14 @@
 header.site-nav{
-    display: none;
-    width: 100%;
-    min-height: 40px;
-    background: $nav-color;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    border: 1px solid transparent;
+  display: none;
+  width: 100%;
+  min-height: 40px;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  border: 1px solid transparent;
   .nav-content{
     max-width: $main-width;
     margin: 0 auto;
@@ -17,12 +17,9 @@ header.site-nav{
     float: left;
     font-size: 40px;
     font-family: $logo-font;
-    a{
-      color: $theme-font-color;
-      &::after{
-        content: none;
-      }
-    }
+  }
+  i{
+    padding-right: 4px;
   }
   a{
     text-decoration: none;
@@ -61,4 +58,22 @@ header.site-nav{
       }
     }
   }
+  input {
+    transition: background-color 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    height: 30px;
+    width: 140px;
+    padding-left: 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+  }
+}
+
+header.nottop {
+  background-color: $nav-color;
+}
+header.opacity0 {
+  opacity: 0;
 }

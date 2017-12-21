@@ -1,6 +1,6 @@
 .back-to-top {
   text-align: center;
-  display: none;
+  opacity: 0;
   position: fixed;
   right: 80px;
   bottom: 40px;
@@ -11,13 +11,18 @@
   box-shadow: 0 1px 10px rgba(0,0,0,.2);
   transition: all .3s ease-out;
   z-index: 10;
+  transition: all .3s ease-out;
   cursor: pointer;
   &:hover {
     transform: translateY(-5px);
   }
   i{
     display: inline-block;
-    margin-top: -6px;
-    font-size: 35px;
+    padding-top: 5px;
+    font-size: 30px;
   }
+}
+
+.show{
+  opacity: 1;
 }
